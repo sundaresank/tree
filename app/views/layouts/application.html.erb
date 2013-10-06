@@ -8,7 +8,19 @@
 </head>
 <body>
  <h1> Pages</h1>
-<%= yield %>
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   <div class="navbar-header">
+     <%= link_to "Railstree", root_path, :class => "navbar-brand" %>
+
+     <ul class="nav navbar-nav">
+       <li class="active"><a href="#">All Statuses</a></li>
+       <li><%= link_to "New", new_status_path %></a></li>
+         </ul>
+   </div>
+ </nav>
+ <div class="container">
+ <%= yield %>
+   </div>
  <em>Footer</em>
 </body>
 </html>
